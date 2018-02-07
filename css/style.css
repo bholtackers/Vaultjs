@@ -11,13 +11,18 @@ body {
   src: url(../fonts/SteamcogCaps.ttf);
 }
 
+@font-face {
+  font-family: Geosteam;
+  src: url(../fonts/geosteam.ttf);
+}
+
 .Keylock-containter {
   position: relative;
   margin: 20px auto;
   float: right;
   margin-right: 50px;
-  width: 400px;
-  height: 400px;
+  width: 425px;
+  height: 425px;
   background-color: #B1811D;
   border-radius: 20px;
   overflow: hidden;
@@ -45,6 +50,7 @@ body {
   right: 8%;
   bottom: 8%;
   left: 8%;
+  padding: 10px;
   background: -webkit-linear-gradient(left, #8F6002 50%,#825301 50%);
   border-radius: 20px;
   box-shadow: 4px 4px 0 #6d4601 inset;
@@ -65,9 +71,68 @@ body {
   border-style:solid;
   position: relative;
   margin-left: 9.8px;
-  margin-top: 75%;
+  margin-top: auto;
   float: left;
   height: 75px;
   width: 30%;
   overflow: hidden;
 }
+
+.Code-Text {
+  font-family: Geosteam;
+  font-size: 29px;
+  text-align: center;
+  color: rgb(39,17,5);
+  position: relative;
+  float: left;
+}
+
+#Entered-Code {
+  margin: 0px auto;
+  margin-top: 10px;
+  position: relative;
+  font-size: 75px;
+  text-align: center;
+  padding-top: 10px;
+  height: 75px;
+  width: 99%;
+  float: left;
+}
+
+#Lights {
+  border-width: 5px;
+  border-style: solid;
+  margin-top: 12px;
+  border-radius: 25px;
+  border-color: rgb(39,17,5);
+  width: 99%;
+  height: 25%;
+  float: left;
+}
+
+.Light {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+  .Light.Red {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(74, 7, 0);
+  }
+  .Light.Green {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(0, 74, 7);
+  }
+
+  #Outcome{
+    height: auto;
+    width: 99%;
+    text-align: center;
+    font-family: Geosteam;
+    float: left;
+    padding-top: 10px;
+    font-size: 25px;
+    color: rgb(39,17,5);
+  }
