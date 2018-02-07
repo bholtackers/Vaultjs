@@ -14,12 +14,21 @@
   <div class="rivet bottom"></div>
   <div class="rivet right"></div>
   <div class="innerDiv">
+    <div class="Code-Text">
+      INPUT THE CODE
     <button class="Button" value="1" onclick="getNumber(this)">1</button>
     <button class="Button" value="2" onclick="getNumber(this)">2</button>
     <button class="Button" value="3" onclick="getNumber(this)">3</button>
-  </div>
+      <div id="Entered-Code" onchange="ButtonDisabler()" ></div>
+    </div>
+    <div id="Lights">
+      <div class="Light Red"></div>
+      <div class="Light Green"></div>
+      </div>
+      <div id="Outcome"></div>
+</div>
 </div>
 
-<script type="text/javascript" src="j/main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
