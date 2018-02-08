@@ -1,5 +1,5 @@
 var codeContainer = document.getElementById('Entered-Code');
-var x = "312"
+var x = "aaa"
 var codeInput = codeContainer.length;
 
 function getNumber(button){
