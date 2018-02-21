@@ -6,8 +6,6 @@ var outcome = document.getElementById('Outcome')
 var CorrectCode = "123";
 var CorrectTimes = 0;
 var IncorrectTimes = 0;
-var Ended = false;
-var blinkCounter = 0;
 
 function getNumber(button)
 {
@@ -28,22 +26,9 @@ function getNumber(button)
     }
   if (codeContainer.innerHTML === CorrectCode)
     {
-      Ended = true;
       outcome.classList.add("fade-in");
       outcome.innerHTML = "THE CODE IS CORRECT"
-        toggle_color("rgb(0, 74, 7)", "rgb(0, 199,19)", 1000, 500);
-        function toggle_color(color1, color2, cycle_time, wait_time) {
-
-            setInterval(function first_color() {
-                greenLight.style.backgroundColor = color1;
-                setTimeout(change_color, wait_time);
-            }, cycle_time);
-
-            function change_color() {
-                greenLight.style.backgroundColor = color2;
-            }
-        }
-
+      greenLight.classList.add("blinkG");
       CorrectTimes++;
       greenLight.innerHTML = "CORRECT: " + CorrectTimes.toString() + " TIMES"
       var audio = new Audio('snd/Open.mp3');
@@ -52,23 +37,9 @@ function getNumber(button)
     }
   else if ((codeContainer.innerHTML != CorrectCode) && (codeLengthChecker === 3) )
     {
-      Ended = true;
       outcome.classList.add("fade-in");
       outcome.innerHTML = "THE CODE IS INCORRECT"
-        toggle_color("rgb(74, 7, 0)", "rgb(199, 19, 0)", 1000, 500);
-        function toggle_color(color1, color2, cycle_time, wait_time) {
-
-            setInterval(function first_color() {
-                blinkCounter++;
-                redLight.style.backgroundColor = color1;
-                setTimeout(change_color, wait_time);
-            }, cycle_time);
-
-            function change_color() {
-                redLight.style.backgroundColor = color2;
-            }
-        }
-
+      redLight.classList.add("blinkR");
       IncorrectTimes++;
       redLight.innerHTML = "INCORRECT: " + IncorrectTimes.toString() + " TIMES"
       var audio = new Audio('snd/Close.mp3');
@@ -79,12 +50,11 @@ function getNumber(button)
 
 function reset(){
   DisableCounter = 0;
-  Ended = false;
-  blinkCounter = 0;
+  greenLight.classList.remove("blinkG");
+  redLight.classList.remove("blinkR");
   codeContainer.innerHTML = "";
   outcome.innerHTML = "";
   outcome.classList.remove("fade-in");
-  greenLight.style.backgroundColor = "rgb(0, 74, 7)";
 }
 
 function resetButton(){
