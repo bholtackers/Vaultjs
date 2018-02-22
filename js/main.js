@@ -48,21 +48,18 @@ function getNumber(button)
     }
 }
 
-function reset(){
-  DisableCounter = 0;
-  greenLight.classList.remove("blinkG");
-  redLight.classList.remove("blinkR");
-  codeContainer.innerHTML = "";
-  outcome.innerHTML = "";
-  outcome.classList.remove("fade-in");
-}
+function reset()
+  {
+    DisableCounter = 0;
+    greenLight.classList.remove("blinkG");
+    redLight.classList.remove("blinkR");
+    codeContainer.innerHTML = "";
+    outcome.innerHTML = "";
+    outcome.classList.remove("fade-in");
+  }
 
-function resetButton(){
-  DisableCounter = 0;
-  ButtonDisabler[DisableCounter].disabled = false;
-}
-
-
-
-
-//Blinker kleuren: "rgb(199, 19, 0)" en "rgb(0, 199,19)"
+function resetButton()
+  {
+    DisableCounter = 0;
+    ButtonDisabler[DisableCounter].disabled = false;
+  }
