@@ -22,6 +22,7 @@ function getNumber(button)
       else
         {
           ButtonDisabler[DisableCounter].disabled = false;
+                    setTimeout(resetButton,6000)
         }
     }
   if (codeContainer.innerHTML === CorrectCode)
@@ -60,6 +61,9 @@ function reset()
 
 function resetButton()
   {
-    DisableCounter = 0;
-    ButtonDisabler[DisableCounter].disabled = false;
+    DisableCounter = 0
+    for(counterEnable=0; counterEnable < ButtonDisabler.length; counterEnable++) {
+
+        ButtonDisabler[counterEnable].disabled = false;
+      }
   }
